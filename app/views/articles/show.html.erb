@@ -7,7 +7,7 @@
 
 <%= link_to "Edit", edit_article_path(@article) %> | 
 
-<%= link_to "Delete", article_path(@article) ,  method: :delete %> | 
+<%= link_to "Delete", article_path(@article) ,  method: :delete , data: { confirm: "Are ou Sure?"}%> | 
 <%= link_to "Return to Article Page", "http://localhost:3000/articles" %>
 
 
