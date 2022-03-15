@@ -11,9 +11,40 @@
 }
 
 h1 {
-    color: red;
+    color: white;
 }
 
 #logo {
     color: white;
+}
+
+#home-container {
+    margin-top: 25px;
+    color: white;
+}
+
+.jumbotron {
+    background-image: asset-url('image.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.FPFooter {
+    background-color: darkblue !important;
+    width: 100% !important;
+}
+
+#heading1 {
+    color: darkblue;
+}
+
+#page_bg {
+    background-color: lightgray;
+}
+
+.btns {
+    color: white !important;
+    text-decoration: none !important;
 }
