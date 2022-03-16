@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
 
 def create 
   @article = Article.new(params.require(:article).permit(:title, :description)) #by default, no ariale are allowed to be displayed in  a rails views unless we manually allow them and specify which values and fields are allwoed
-  
+  @article.user = User.first
   if   @article.save 
     flash[:notice] = "Article was created successfully."
   #save the object to database

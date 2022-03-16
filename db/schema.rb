@@ -10,25 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_03_15_133524) do
-=======
-ActiveRecord::Schema.define(version: 2022_03_15_101044) do
->>>>>>> 0e452454b0154906180ffd96500a74a40f40297b
+ActiveRecord::Schema.define(version: 2022_03_16_083551) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-<<<<<<< HEAD
     t.string "email"
-=======
->>>>>>> 0e452454b0154906180ffd96500a74a40f40297b
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
