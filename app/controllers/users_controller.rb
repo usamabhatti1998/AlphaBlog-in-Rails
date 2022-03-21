@@ -1,8 +1,11 @@
-        class UsersController < ApplicationController
+class UsersController < ApplicationController
+
+
         def new
             @user = User.new
 
         end
+
 
         def edit
             @user = User.find(params[:id])
@@ -25,15 +28,15 @@
 
         def create
             @user = User.new(user_params)
-            if @user.save 
-                flash[:notice] = "Dear #{@user.username}Welcome to Alpha Blog, You Have Succesfully Created it"
-                redirect_to articles_path
-
+            if @user.save
+              session[:user_id] = @user.id
+              flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up"
+              redirect_to articles_path
             else
-                render 'new'
+              render 'new'
             end
-        end
-
+          end
+        
 
         def show
             @user = User.find(params[:id])
